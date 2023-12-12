@@ -1,17 +1,17 @@
 '''
-정수 배열 numbers와 정수 num1, num2가 매개변수로 주어질 때, 
-numbers의 num1번 째 인덱스부터 num2번째 인덱스까지 자른 정수 배열을 
-return 하도록 solution 함수를 완성해보세요.
+정수가 담긴 배열 numbers와 문자열 direction가 매개변수로 주어집니다. 
+배열 numbers의 원소를 direction방향으로 한 칸씩 회전시킨 배열을 
+return하도록 solution 함수를 완성해주세요.
 
-numbers	            num1	    num2	result
-[1, 2, 3, 4, 5]	    1	        3	    [2, 3, 4]
-[1, 3, 5]	        1	        2	    [3, 5]
+numbers	                        direction	    result
+[1, 2, 3]	                    "right"	        [3, 1, 2]
+[4, 455, 6, 4, -1, 45, 6]	    "left"	        [455, 6, 4, -1, 45, 6, 4]
 '''
 
 # %%
-def solution(numbers, num1, num2):
-    return numbers[num1:num2 + 1]
+def solution(numbers, direction):
+    return [numbers[-1]] + numbers[:-1] if direction == 'right' else numbers[1:] + [numbers[0]]
 
-print(solution([1, 2, 3, 4, 5], 1, 3))
-print(solution([1, 3, 5], 1, 2))
+print(solution([1, 2, 3], "right"))
+print(solution([4, 455, 6, 4, -1, 45, 6],"left"))
 

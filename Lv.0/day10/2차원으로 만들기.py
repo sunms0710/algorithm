@@ -1,17 +1,26 @@
 '''
-정수 배열 numbers와 정수 num1, num2가 매개변수로 주어질 때, 
-numbers의 num1번 째 인덱스부터 num2번째 인덱스까지 자른 정수 배열을 
-return 하도록 solution 함수를 완성해보세요.
+정수 배열 num_list와 정수 n이 매개변수로 주어집니다. 
+num_list를 다음 설명과 같이 2차원 배열로 바꿔 
+return하도록 solution 함수를 완성해주세요.
 
-numbers	            num1	    num2	result
-[1, 2, 3, 4, 5]	    1	        3	    [2, 3, 4]
-[1, 3, 5]	        1	        2	    [3, 5]
+num_list가 [1, 2, 3, 4, 5, 6, 7, 8] 로 길이가 8이고 n이 2이므로 
+num_list를 2 * 4 배열로 다음과 같이 변경합니다. 
+2차원으로 바꿀 때에는 num_list의 원소들을 앞에서부터 n개씩 나눠 
+2차원 배열로 변경합니다.
+
+num_list	                            n	    result
+[1, 2, 3, 4, 5, 6, 7, 8]	            2	    [[1, 2], [3, 4], [5, 6], [7, 8]]
+[100, 95, 2, 4, 5, 6, 18, 33, 948]	    3	    [[100, 95, 2], [4, 5, 6], [18, 33, 948]]
 '''
 
 # %%
-def solution(numbers, num1, num2):
-    return numbers[num1:num2 + 1]
+def solution(num_list, n):
+    answer = [[]]
+   
+    return answer
 
-print(solution([1, 2, 3, 4, 5], 1, 3))
-print(solution([1, 3, 5], 1, 2))
+print(solution([1, 2, 3, 4, 5, 6, 7, 8],2))
+print(solution([100, 95, 2, 4, 5, 6, 18, 33, 948],3))
+
+
 
